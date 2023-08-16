@@ -119,7 +119,6 @@ const Form = () => {
       setOpen(true);
     } else {
       axios.post("http://localhost:8000/infoData", {
-        title: info.title,
         des: info.des,
         selectLevel: info.selectLevel,
         fname: info.fname,

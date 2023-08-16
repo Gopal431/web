@@ -32,11 +32,15 @@ const InfoData = () => {
     .catch((err)=>console.log(err))
   }
  
-  const editHandler = (id , title , des , selectLevel)=>{
+  const editHandler = (id , pnumber , des , selectLevel ,dname,fname,lname,email)=>{
     localStorage.setItem("id",id)
-    localStorage.setItem("title",title)
+    localStorage.setItem("pnumber",pnumber)
     localStorage.setItem("des",des)
     localStorage.setItem("selectLevel",selectLevel)
+    localStorage.setItem("dname",dname)
+    localStorage.setItem("fname",fname)
+    localStorage.setItem("lname",lname)
+    localStorage.setItem("email",email)
     navigate('/edit')
   }
   return (
@@ -55,7 +59,6 @@ const InfoData = () => {
               <TableCell align="right">Discription</TableCell>
               <TableCell align="right">Selete Level</TableCell>
               <TableCell align="right">Edit</TableCell>
-              <TableCell align="right">Delete</TableCell>
               <TableCell align="right">Delete</TableCell>
             </TableRow>
           </TableHead>
